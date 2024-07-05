@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="file.css" />
+
+    <script>
+        function showHint(str) {
+            if (str.length == 0) {
+                document.getElementById("txtHint").innerHTML = "";
+                return;
+            } else {
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function () {
+                    console.log( this.responseText);
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("txtHint").innerHTML = this.responseText;
+                    }
+                };
+                xmlhttp.open("GET", "home.php?q=" + str, true);
+                xmlhttp.send();
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="layout">
+        <div class="main">
+
+            <ul class="lead">
+                <li><a href="">
+                        <h1>MESSHO</h1>
+                    </a></li>
+
+                <input type="search" placeholder="search" onkeyup="showHint(this.value)">
+
+                <li><a href="#" class="popup-Container" onmouseenter="content()" onmouseleave="hide()">MEN</a></li>
+                <li><a href="#">WOMEN</a></li>
+                <li><a href="#">KIDS</a></li>
+                <li><a href="#">HOME&LIVING</a></li>
+                <li><a href="#" onclick="form()">LOGIN</a></li>
+            </ul>
+            <span class="find" id="txtHint">ddd</span>
+            <span class="heading">LOWEST PRICES<br>
+                BEST<br> QUALITY SHOPPINGS
+            </span>
+            <div class="offer">
+                <span class="free">Free<br> Delivery</span>
+                <span class="free">Cash on <br>Delivery</span>
+                <span class="free">Easy <br>Returns</span>
+            </div>
+        </div>
+        <div class="mid">
+            <div class="mid-div-first">
+                <div class="mid-div"><img
+                        src="https://images.pexels.com/photos/3353621/pexels-photo-3353621.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="tt">
+                    <p>JACKET</p>
+                    <span class="title"> UP TO 50% OFF</span>
+                    <button>SHOP NOW</button>
+                </div>
+                <div class="mid-div">
+                    <img src="https://images.pexels.com/photos/4046317/pexels-photo-4046317.jpeg?auto=compress&cs=tinysrgb&w=400"
+                        alt="tt">
+                    <p>SUITS</p>
+                    <span class="title"> UP TO 20% OFF</span>
+                    <button>SHOP NOW</button>
+                </div>
+                <div class="mid-div">
+                    <img src="https://images.pexels.com/photos/297933/pexels-photo-297933.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="tt">
+                    <p>SHIRTS</p>
+                    <span class="title"> UP TO 10% OFF</span>
+                    <button>SHOP NOW</button>
+                </div>
+                <div class="mid-div">
+                    <img src="https://plus.unsplash.com/premium_photo-1675186049366-64a655f8f537?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y2xvdGhlc3xlbnwwfHwwfHx8MA%3D%3D"
+                        alt="tt">
+                    <p>COAT</p>
+                    <span class="title"> UP TO 20% OFF</span>
+                    <button>SHOP NOW</button>
+                </div>
+                <div class="mid-div">
+                    <img src="https://media.istockphoto.com/id/1776568669/photo/fancy-indian-sarees-neatly-stacked-colorful-silk-saris-in-racks-in-a-textile-shop-incredible.jpg?s=1024x1024&w=is&k=20&c=_7czQ7XGNgrh7VpZOlcZvMBqAx-32hvunjX9KRoqHRQ="
+                        alt="tt">
+                    <p>SHAREE</p>
+                    <span class="title"> UP TO 50% OFF</span>
+                    <button>SHOP NOW</button>
+                </div>
+            </div>
+            <div class="mid-div-second">
+                <div class="mid-div">
+                    <img src="https://images.pexels.com/photos/52518/jeans-pants-blue-shop-52518.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="tt">
+                    <p>PAINTS</p>
+                    <span class="title"> UP TO 80% OFF</span>
+                    <button>SHOP NOW</button>
+                </div>
+                <div class="mid-div">
+                    <img src="https://images.pexels.com/photos/20803252/pexels-photo-20803252/free-photo-of-brunette-woman-in-traditional-dress.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="tt">
+                    <p>SUITS</p>
+                    <span class="title"> UP TO 50% OFF</span>
+                    <button>SHOP NOW</button>
+                </div>
+                <div class="mid-div">
+                    <img src="https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="tt">
+                    <p>BAG</p>
+                    <span class="title"> UP TO 50% OFF</span>
+                    <button>SHOP NOW</button>
+                </div>
+                <div class="mid-div">
+                    <img src="https://images.pexels.com/photos/3360545/pexels-photo-3360545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="tt">
+                    <p>SHOES</p>
+                    <span class="title"> UP TO 30% OFF</span>
+                    <button>SHOP NOW</button>
+                </div>
+                <div class="mid-div">
+                    <img src="https://images.pexels.com/photos/3598123/pexels-photo-3598123.jpeg?auto=compress&cs=tinysrgb&w=400"
+                        alt="tt">
+                    <p>sandals</p>
+                    <span class="title"> UP TO 20% OFF</span>
+                    <button>SHOP NOW</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer">
+            <ul>
+                <h5>CUSTOMER POLICIES</h5>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">T&C</a></li>
+                <li><a href="#">Terms Of Use</a></li>
+                <li><a href="#">Track Orders</a></li>
+                <li><a href="#">Shipping</a></li>
+                <li><a href="#">Cancellation</a></li>
+                <li><a href="#">Returns</a></li>
+                <li><a href="#">Privacy policy</a></li>
+                <li><a href="#">Grievance Officer</a></li>
+            </ul>
+            <ul>
+                <h5>USEFULL LINKS</h5>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Site Map</a></li>
+                <li><a href="#">Corporate Information</a></li>
+                <li><a href="#">Whitehat</a></li>
+                <h5>Keep in touch</h5>
+                <span class="icon"><i class="fa-brands fa-square-facebook"></i></span>
+                <span class="icon"><i class="fa-brands fa-youtube"></i></span>
+                <span class="icon"><i class="fa-brands fa-twitter"></i></span>
+                <span class="icon"><i class="fa-brands fa-instagram"></i></span>
+
+            </ul>
+            <ul>
+
+                <li><a href="#">Kids</a></li>
+                <li><a href="#">Home & Living</a></li>
+                <li><a href="#">Gift Cards New</a></li>
+                <li><a href="#">Beauty</a></li>
+                <li><a href="#">Myntra Insider New</a></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- <div class="popup-content1">
+        Indian & Fusion Wear
+        Kurtas & Suits
+        Kurtis, Tunics & Tops
+        Sarees
+        Ethnic Wear
+        Leggings, Salwars & Churidars
+        Skirts & Palazzos
+        Dress Materials
+    </div> -->
+    <script>
+        function content() {
+            const y = document.getElementById('popupcontent');
+            y.style.display = "block";
+        }
+        function hide() {
+            const y = document.getElementById('popupcontent');
+            y.style.display = "none";
+
+        }
+    </script>
+</body>
+
+</html>
